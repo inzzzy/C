@@ -6,6 +6,10 @@
     -           Corrupts Audio File via XOR             -
     - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+/* This code corrupts a .wav file by XOR-ing each floating point value of the audio with the key passed as a argument to the script. 
+   The results are often just harsh unpredictable noise since bitwise operations are done on floating point values, which can result in extreme values. 
+   This serves no real functional purpose since the product audio file is corrupt, but it cured my curiosity :) */
+
 // Number of bytes in .wav header
 const int HEADER_SIZE = 44;
 
