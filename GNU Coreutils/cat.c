@@ -15,11 +15,11 @@ int main(int argc, char *argv[]){
     FILE *fp;
 
     if (argc == 1)
-        concatenate(stdin, stdout);
+        concatenate(stdin, stdout); // If no arguments are provided, command will simply copy from STDIN to STDOUT
     else
         while(--argc > 0)
             if ((fp = fopen(*++argv, "r")) == NULL){
-                fprintf(stderr, "ERROR: Can not open file %s\n", *argv);
+                fprintf(stderr, "ERROR: Can not open file %s\n", *argv); 
                 exit(1);
             }
             else{
